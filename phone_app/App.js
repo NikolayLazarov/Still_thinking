@@ -10,8 +10,12 @@ import {
   TextInput,
   ScrollView,
   FlatList,
+  TouchableOpacity,
 } from 'react-native';
 
+const pressHandler = (id) =>{
+  console.log(id)
+}
 
 export default function App() {
   {/*func proba*/}
@@ -44,7 +48,7 @@ export default function App() {
        <TextInput
        placeholder = 'write somethind' 
        style={styles.searchBarStyles}
-       onChangeText = {() =>setName()}
+      // onChangeText = {() =>setName()}
        />
        
        </View>
@@ -64,9 +68,12 @@ export default function App() {
         <ScrollView>
         {types.map((item) => {
           return (
+
             <View key = {item.key}>
+              <TouchableOpacity  onPress= {()=>pressHandler(item.key)}>
               <Text style = {styles.item}>{item.type}</Text>
-            </View>
+              </TouchableOpacity>
+              </View>
           )
         })}
         </ScrollView>
@@ -115,13 +122,10 @@ const styles = StyleSheet.create({
     marginTop: 24,
     padding:30,
     borderColor:"#00ff80",
-    //backgroundColor: '#00ff80',
+    backgroundColor: '#00ff80',
     fontSize: 24,
     width:150,
-    
 
-
-  
   }
 
 });
