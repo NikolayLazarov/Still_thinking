@@ -27,7 +27,7 @@ body{
 
 .content{
   background-color: lightgray;
-  padding: 10vw;
+  padding: 7.5vw;
 }
 
 .home-option{
@@ -57,5 +57,25 @@ body{
 
 .home-options{
   border-style: solid;
+}
 
+.btn-group:hover{
+  background-color: #18A864;
+  border-radius: 5px;
+}
+
+.dropdown:hover{
+  background-color: #159559;
+  border-radius: 5px;
+}
+
+.items{
+  display: flex;
+
+}
+
+.item{
+  border-style: solid;
+  border-color: black;
+  
 }
