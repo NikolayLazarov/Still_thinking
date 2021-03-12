@@ -1,3 +1,61 @@
 body{
   background-color: white;
 }
+
+.bannerimage {
+  filter: brightness(75%);
+  width: 99vmax;
+  position: absolute;
+  z-index: -1;
+}
+
+.line-1{
+  font-size: 11vmax;
+  text-align: center;
+  padding-top: 7.5vmax;
+  padding-bottom: 7.5vmax;
+  color: lightgray;
+}
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.content{
+  background-color: lightgray;
+  padding: 10vw;
+}
+
+.home-option{
+  background-color: red;
+  display: flex;
+  padding-top: 1vw;
+  padding-left: 7.5vw;
+  padding-bottom: 1vw;
+  border-style: solid;
+}
+
+.square{
+  background-color: blue;
+  width: 25vw;
+  height: 25vw;
+  text-align: center;
+  font-size: 10vw;
+  padding: 4.5vw;
+}
+
+.text{
+  padding: 5vw 7.5vw;
+  font-size: 2.5vw;
+  left: 80vw;
+  margin-right: 12.5vw;
+}
+
+.home-options{
+  border-style: solid;
+
+}
