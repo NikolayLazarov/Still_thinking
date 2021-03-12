@@ -68,3 +68,14 @@ body{
   background-color: #159559;
   border-radius: 5px;
 }
+
+.items{
+  display: flex;
+
+}
+
+.item{
+  border-style: solid;
+  border-color: black;
+  
+}

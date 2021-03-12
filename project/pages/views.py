@@ -30,6 +30,21 @@ def list(request):
                 "description":"this is description",
                 "usluga":"prodajba/naem/podaryk"
             },
+            {
+                "title":"New",
+                "description":"this is description",
+                "usluga":"prodajba/naem/podaryk"
+            },
+            {
+                "title":"New",
+                "description":"this is description",
+                "usluga":"prodajba/naem/podaryk"
+            },
+            {
+                "title":"New",
+                "description":"this is description",
+                "usluga":"prodajba/naem/podaryk"
+            },
         ]
 
     }
