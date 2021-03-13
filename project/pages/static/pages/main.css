@@ -72,10 +72,13 @@ body{
 .items{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1vw;
 }
 
 .item{
   border-style: solid;
   border-color: black;
-
+  margin: 1vw;
+  padding: 1.5vw;
 }
