@@ -7,9 +7,7 @@ const pressHandler = (id) =>{
 
 export default function ProductsList({ item }){
     return(        
-            <TouchableOpacity onPress = {()=>pressHandler(item.id)}>
-                <Text style = {styles.item}>{item.type}</Text>
-            </TouchableOpacity>
+           
         );
                 }
 
