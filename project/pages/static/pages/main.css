@@ -33,15 +33,6 @@ body{
   border-radius: 10px;
 }
 
-.home-option{
-  background-color: red;
-  display: flex;
-  padding-top: 1vw;
-  padding-left: 7.5vw;
-  padding-bottom: 1vw;
-  border-style: solid;
-}
-
 .square{
   background-color: blue;
   width: 25vw;
@@ -56,10 +47,6 @@ body{
   font-size: 2.5vw;
   left: 80vw;
   margin-right: 12.5vw;
-}
-
-.home-options{
-  border-style: solid;
 }
 
 .btn-group:hover{
@@ -86,10 +73,25 @@ body{
   padding: 1vw;
 }
 
-.list-square{
-  background-color: blue;
-  width: 15vw;
-  height: 15vw;
+
+/* HOME PAGE */
+
+.home-options{
+  border-style: solid;
+}
+
+.home-option{
+  background-color: #d2eee1;
+  display: flex;
+  padding-top: 1vw;
+  padding-left: 7.5vw;
+  padding-bottom: 1vw;
+  border-style: solid;
+}
+
+.photo-category {
+  width: 30vw;
+  height: 30vw;
   text-align: center;
   font-size: 5vw;
   padding: 2.5vw;
