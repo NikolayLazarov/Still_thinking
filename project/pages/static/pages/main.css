@@ -4,7 +4,7 @@ body{
 
 .bannerimage {
   filter: brightness(75%);
-  width: 99vmax;
+  width: 99vw;
   position: absolute;
   z-index: -1;
 }
@@ -93,4 +93,8 @@ body{
   text-align: center;
   font-size: 5vw;
   padding: 2.5vw;
+}
+
+.create-form{
+  margin: 5vw;
 }

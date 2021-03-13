@@ -6,10 +6,12 @@
 <div class="line-1"> Create </div>
   <div class="content">
 
-    {% load crispy_forms_tags %}
-    <form method="post" class="uniForm">
-        {{ form|crispy }}
-    </form>
+    <div class="create-form">
+      {% load crispy_forms_tags %}
+      <form method="post" class="uniForm">
+          {{ form|crispy }}
+      </form>
+    </div>
 
   </div>
   </div>
