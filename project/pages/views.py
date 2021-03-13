@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import MyForm
 def home(request):
     return render(request, "home.html")
 
@@ -62,3 +62,11 @@ def detail(request):
 
     }
     return render(request, "detail.html",context)
+
+def create(request):
+    form=MyForm
+    print(form)
+    context={
+        "form":form,
+    }
+    return render(request, "create.html",context)
