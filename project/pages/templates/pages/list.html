@@ -9,9 +9,9 @@
       {% for i in items %}
 
         <div class="item">
-          {{ i.title }}
-          {{ i.description }}
-          {{ i.usluga }}
+          <h1>{{ i.title }}</h1>
+          <p>{{ i.description }}</p>
+          <div class="muted">{{ i.usluga }}</div>
         </div>
       {% endfor %}
     </div>
