@@ -4,7 +4,7 @@ body{
 
 .bannerimage {
   filter: brightness(75%);
-  width: 99vmax;
+  width: 99.4vmax;
   position: absolute;
   z-index: -1;
 }
@@ -23,14 +23,6 @@ body{
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-}
-
-.content{
-  background: rgba(150, 150, 150, 0.9);
-  padding: 4.5vw;
-  padding-top: 2.5vw;
-  margin: 3vw;
-  border-radius: 10px;
 }
 
 .square{
@@ -76,20 +68,53 @@ body{
 
 /* HOME PAGE */
 
-.home-options{
-  border-style: solid;
+.backplate {
+  background: rgba(211, 211, 211, 0.8);
+  padding: 10vw;
+  padding-top: 6vh;
+  padding-bottom: 5vh;
 }
 
-.home-option{
+.home-options {
+  border-style: solid;
+  border-color: #188555;
+  border-width: 1.5vw;
+  border-radius: 10px;
+}
+
+.home-option {
   background-color: #d2eee1;
   display: flex;
-  padding-top: 1vw;
+  padding-top: 3vw;
   padding-left: 7.5vw;
-  padding-bottom: 1vw;
-  border-style: solid;
+  padding-bottom: 3vw;
+  border-bottom-style: solid;
+  border-bottom-width: 1vw;
+  border-bottom-color: #188555;
+}
+
+.option-button {
+  background-color: #1bbb70;
+  border-color: #188555;
+  color: white;
 }
 
 .photo-category {
+  width: 30vw;
+  height: 30vw;
+  text-align: center;
+  font-size: 5vw;
+  padding: 2.5vw;
+}
+
+.credits {
+  text-align: center;
+  color: black;
+}
+
+/* DETAILS PAGE */
+
+.photo-detail {
   width: 30vw;
   height: 30vw;
   text-align: center;
