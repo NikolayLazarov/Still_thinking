@@ -26,8 +26,11 @@ body{
 }
 
 .content{
-  background-color: lightgray;
-  padding: 7.5vw;
+  background: rgba(150, 150, 150, 0.9);
+  padding: 4.5vw;
+  padding-top: 2.5vw;
+  margin: 3vw;
+  border-radius: 10px;
 }
 
 .home-option{
@@ -77,8 +80,17 @@ body{
 }
 
 .item{
-  border-style: solid;
-  border-color: black;
+  background-color: #e0e0e0;
+  border-radius: 10px;
   margin: 1vw;
-  padding: 1.5vw;
+  padding: 1vw;
+}
+
+.list-square{
+  background-color: blue;
+  width: 15vw;
+  height: 15vw;
+  text-align: center;
+  font-size: 5vw;
+  padding: 2.5vw;
 }
