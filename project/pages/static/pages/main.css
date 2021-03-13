@@ -62,7 +62,7 @@ body{
   background-color: #e0e0e0;
   border-radius: 10px;
   margin: 1vw;
-  padding: 1vw;
+  padding: 2vw;
 }
 
 
@@ -125,4 +125,11 @@ body{
   text-align: center;
   font-size: 5vw;
   padding: 2.5vw;
+}
+
+.content{
+  background-color: lightgray;
+  padding: 2.5vw;
+  padding-top:1vw;
+  margin: 0vw 2.5vw;
 }
