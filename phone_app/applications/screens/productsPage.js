@@ -1,10 +1,15 @@
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from 'react-navigation-stack';
+import { StackRouter } from 'react-navigation';
+
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, SafeAreaView, FlatList, TouchableOpacity} from 'react-native';
 import { globalStyles } from '../styles/globalStyles';
 import SearchBar from '../components/searchBar'
 
-export default function ProductsPage(){
-    const [types, setTypes] = useState([
+export default function ProductsPage({navigation}){
+    const [types] = useState([
         {type: 'clothes', id:'1'},
         {type: 'cars', id:'2'},
         {type: 'books', id:'3'},
@@ -13,13 +18,12 @@ export default function ProductsPage(){
         ]);
     return(
         <SafeAreaView style = {globalStyles.container}>
-            <Text>Products Screen</Text>
             <SearchBar/>
                 <View>
                 <FlatList 
                 data = {types}
                 renderItem = {({item}) =>(
-                    <TouchableOpacity onPress = {()=> navigation.navigate('ProductPage', item)}>
+                    <TouchableOpacity onPress = {()=> navigation.navigate('PreviewPage', item)}>
                     <Text style = {globalStyles.titleText}>{item.type}</Text>
                     </TouchableOpacity>
                 )}
