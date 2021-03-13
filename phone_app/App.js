@@ -14,14 +14,19 @@ import { globalStyles } from './applications/styles/globalStyles';
 
 const screens = {
   Home:{
-      screen: HomePage
+      screen: HomePage,
+      navigationOptions:{
+        title: 'Re-help',
+        //headerStyle: {backgroundStyle: '#1bbb70',},
+      }
   },
 
   ProductsPage: {
       screen: ProductsPage
   },
   PreviewPage:{
-    screen:PreviewPage
+    screen: PreviewPage,
+    //title
   }
   
 }

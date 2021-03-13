@@ -5,7 +5,7 @@ import { globalStyles } from '../styles/globalStyles';
 export default function PreviewPage(){
     return(
         <SafeAreaView style = {globalStyles.container}>
-            <Text>Preview Screen</Text>
+            <Text></Text>
         </SafeAreaView>
     )
 }

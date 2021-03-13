@@ -10,11 +10,12 @@ import SearchBar from '../components/searchBar'
 
 export default function ProductsPage({navigation}){
     const [types] = useState([
-        {type: 'clothes', id:'1'},
+        {type: 'clothes', id:'1', item: 'hat',},
         {type: 'cars', id:'2'},
         {type: 'books', id:'3'},
         {type: 'Tvs', id:'4'},
         {type: 'computers', id:'5'},
+        {type: 'clothes', id: '6', item: 'shirt',},
         ]);
     return(
         <SafeAreaView style = {globalStyles.container}>
@@ -23,8 +24,8 @@ export default function ProductsPage({navigation}){
                 <FlatList 
                 data = {types}
                 renderItem = {({item}) =>(
-                    <TouchableOpacity onPress = {()=> navigation.navigate('PreviewPage', item)}>
-                    <Text style = {globalStyles.titleText}>{item.type}</Text>
+                    <TouchableOpacity onPress = {()=> navigation.navigate('PreviewPage', item.type)}>
+                    <Text style = {globalStyles.titleText}>{item.item}</Text>
                     </TouchableOpacity>
                 )}
                 
