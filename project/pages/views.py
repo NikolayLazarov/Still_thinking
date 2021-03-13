@@ -49,3 +49,16 @@ def list(request):
 
     }
     return render(request, "list.html",context)
+
+def detail(request):
+
+    context={
+        "item":
+            {
+                "title":"New",
+                "description":"this is description",
+                "usluga":"prodajba/naem/podaryk"
+            },
+
+    }
+    return render(request, "detail.html",context)
