@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, SafeAreaView, FlatList, TouchableOpacity} from 'react-native';
 import { globalStyles } from '../styles/globalStyles';
-//import SearchBar from '../components/searchBar';
-import ProductsList from '../components/searchBar';
-import { NavigationEvents } from 'react-navigation';
-//import Home from './applications/screens/home';
+import SearchBar from '../components/searchBar'
 
-export default function HomePage(){
+export default function HomePage({navigation}){
     const [types, setTypes] = useState([
         {type: 'clothes', id:'1'},
         {type: 'cars', id:'2'},
@@ -18,7 +15,7 @@ export default function HomePage(){
         <SafeAreaView style = {globalStyles.container}>
 
             {/* /<Header/> <SearchBar/> */}
-               
+                <SearchBar/>
                 <View>
                 <FlatList 
                 data = {types}
