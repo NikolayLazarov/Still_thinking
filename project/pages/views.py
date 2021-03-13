@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import MyForm
 def home(request):
     return render(request, "home.html")
 
@@ -49,3 +49,24 @@ def list(request):
 
     }
     return render(request, "list.html",context)
+
+def detail(request):
+
+    context={
+        "item":
+            {
+                "title":"New",
+                "description":"this is description",
+                "usluga":"prodajba/naem/podaryk"
+            },
+
+    }
+    return render(request, "detail.html",context)
+
+def create(request):
+    form=MyForm
+    print(form)
+    context={
+        "form":form,
+    }
+    return render(request, "create.html",context)

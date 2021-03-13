@@ -4,7 +4,7 @@ body{
 
 .bannerimage {
   filter: brightness(75%);
-  width: 99vmax;
+  width: 99vw;
   position: absolute;
   z-index: -1;
 }
@@ -25,20 +25,6 @@ body{
     transform: rotate(90deg);
 }
 
-.content{
-  background-color: lightgray;
-  padding: 7.5vw;
-}
-
-.home-option{
-  background-color: red;
-  display: flex;
-  padding-top: 1vw;
-  padding-left: 7.5vw;
-  padding-bottom: 1vw;
-  border-style: solid;
-}
-
 .square{
   background-color: blue;
   width: 25vw;
@@ -53,10 +39,6 @@ body{
   font-size: 2.5vw;
   left: 80vw;
   margin-right: 12.5vw;
-}
-
-.home-options{
-  border-style: solid;
 }
 
 .btn-group:hover{
@@ -77,8 +59,70 @@ body{
 }
 
 .item{
-  border-style: solid;
-  border-color: black;
+  background-color: #e0e0e0;
+  border-radius: 10px;
   margin: 1vw;
-  padding: 1.5vw;
+  padding: 1vw;
+}
+
+
+/* HOME PAGE */
+
+.backplate {
+  background: rgba(211, 211, 211, 0.8);
+  padding: 10vw;
+  padding-top: 6vh;
+  padding-bottom: 5vh;
+}
+
+.home-options {
+  border-style: solid;
+  border-color: #188555;
+  border-width: 1.5vw;
+  border-radius: 10px;
+}
+
+.home-option {
+  background-color: #d2eee1;
+  display: flex;
+  padding-top: 3vw;
+  padding-left: 7.5vw;
+  padding-bottom: 3vw;
+  border-bottom-style: solid;
+  border-bottom-width: 1vw;
+  border-bottom-color: #188555;
+}
+
+.option-button {
+  background-color: #1bbb70;
+  border-color: #188555;
+  color: white;
+}
+
+.photo-category {
+  width: 30vw;
+  height: 30vw;
+  text-align: center;
+  font-size: 5vw;
+  padding: 2.5vw;
+}
+
+.create-form{
+  margin: 5vw;
+}
+
+.submit-btn{
+  margin-top: 1vw;
+}
+.credits {
+  text-align: center;
+  color: black;
+}
+
+.photo-detail {
+  width: 30vw;
+  height: 30vw;
+  text-align: center;
+  font-size: 5vw;
+  padding: 2.5vw;
 }
