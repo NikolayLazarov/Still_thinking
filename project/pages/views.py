@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import ItemCreateForm
 from .models import ItemImage, Item
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 
 def home(request):
     return render(request, "home.html")
@@ -9,55 +9,18 @@ def home(request):
 def about(request):
     return render(request, "about.html")
 
-def list(request):
-
-    context={
-        "items":[
-            {
-                "title":"New",
-                "description":"this is description",
-                "usluga":"prodajba/naem/podaryk"
-            },
-            {
-                "title":"New",
-                "description":"this is description",
-                "usluga":"prodajba/naem/podaryk"
-            },
-            {
-                "title":"New",
-                "description":"this is description",
-                "usluga":"prodajba/naem/podaryk"
-            },
-            {
-                "title":"New",
-                "description":"this is description",
-                "usluga":"prodajba/naem/podaryk"
-            },
-            {
-                "title":"New",
-                "description":"this is description",
-                "usluga":"prodajba/naem/podaryk"
-            },
-            {
-                "title":"New",
-                "description":"this is description",
-                "usluga":"prodajba/naem/podaryk"
-            },
-            {
-                "title":"New",
-                "description":"this is description",
-                "usluga":"prodajba/naem/podaryk"
-            },
-        ]
-
-    }
-    return render(request, "list.html",context)
 
 class ItemDetailView(DetailView):
-
     model = Item
     template_name = "pages/item_detail.html"
     context_object_name = 'item'
+
+
+class ItemListView(ListView):
+    model = Item
+    template_name="pages/item_list.html"
+    context_object_name = 'items'
+
 
 def item_create(request):
     
