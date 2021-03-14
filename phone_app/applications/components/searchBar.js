@@ -22,6 +22,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         padding: 15,
         alignItems:'center',
+        //paddingBottom: 35,
+        marginBottom: 15,
       },
       searchBarText: {
         borderWidth: 1,
