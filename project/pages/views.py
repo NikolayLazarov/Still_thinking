@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from .forms import MyForm
+from django.shortcuts import render, redirect
+from .forms import ItemCreateForm
+from .models import ItemImage, Item
+from django.views.generic import DetailView
+
 def home(request):
     return render(request, "home.html")
 
@@ -50,23 +53,30 @@ def list(request):
     }
     return render(request, "list.html",context)
 
-def detail(request):
+class ItemDetailView(DetailView):
 
-    context={
-        "item":
-            {
-                "title":"New",
-                "description":"this is description",
-                "usluga":"prodajba/naem/podaryk"
-            },
+    model = Item
+    template_name = "pages/item_detail.html"
+    context_object_name = 'item'
 
+def item_create(request):
+    
+    if request.method == 'POST':
+        form = ItemCreateForm(request.POST)
+        
+        if form.is_valid():
+            form.instance.seller = request.user
+            instance = form.save()
+            files = request.FILES.getlist('images')
+            for f in files:
+                image = ItemImage(item=instance, image=f)
+                image.save()
+            return redirect(instance.get_absolute_url())
+    else:
+        form = ItemCreateForm()
+
+    context = {
+        'form': form
     }
-    return render(request, "detail.html",context)
 
-def create(request):
-    form=MyForm
-    print(form)
-    context={
-        "form":form,
-    }
-    return render(request, "create.html",context)
+    return render(request, 'pages/item_create.html', context)    

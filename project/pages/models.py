@@ -33,4 +33,23 @@ class Item(models.Model):
         verbose_name_plural = 'Продукти'
 
     def __str__(self):
-        return f'{self.brand} {self.item_name}'
+        return f'{self.item_name}'
+
+    def get_absolute_url(self):
+        return reverse('item-detail', kwargs={'pk': self.id})
+
+class ItemImage(models.Model):
+    item = models.ForeignKey(
+        Item, verbose_name='Продукт', on_delete=models.CASCADE, related_name='images')
+    image = models.ImageField(verbose_name='Снимка',
+                              upload_to='product_pics')
+    creation_date = models.DateTimeField(
+        verbose_name='Дата на създаване', auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Снимка'
+        verbose_name_plural = 'Снимки'
+        ordering = ['creation_date']
+
+    def __str__(self):
+        return f'Снимка на {self.item}'

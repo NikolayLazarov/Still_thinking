@@ -1,7 +1,13 @@
 from django import forms
-#from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from .models import Item, Category
+
+class ItemCreateForm(forms.ModelForm):
+    category = forms.ModelChoiceField(
+            Category.objects.all(), empty_label="Избери")
+    description = forms.CharField(max_length=300, required=False, widget=forms.Textarea())
+    images = forms.ImageField(widget=forms.ClearableFileInput(attrs={'multiple': True}), required=False)
 
 
-class MyForm(UserCreationForm):
-    email = forms.EmailField()
+    class Meta:
+        model = Item
+        fields = ['category', 'item_name', 'price', 'description']
