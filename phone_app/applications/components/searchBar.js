@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 export default function SearchBar(){
     return(
         <View style = {styles.searchBarStyles}>
-        <Icon name = "ios-search" style = {{fontSize: 24}}></Icon>
+        <Icon name = "ios-search" style = {styles.iconStyle}></Icon>
         <Text></Text> 
         <TextInput
         placeholder = 'write something' 
@@ -20,15 +20,22 @@ const styles = StyleSheet.create({
         //marginTop:15,
         flexDirection: 'row',
         backgroundColor: "#fff",
-        padding: 5,
+        padding: 15,
         alignItems:'center',
+        //paddingBottom: 35,
+        marginBottom: 15,
       },
       searchBarText: {
         borderWidth: 1,
         borderColor: '#777',
-        width:"50%", //take dimensons
+        width:"85%", //take dimensons
         justifyContent: "center",
         paddingHorizontal: 5,
-    
       },
+      iconStyle:{
+        fontSize: 24,
+        paddingRight: 15,
+        alignContent: "flex-start",
+
+      }
 })

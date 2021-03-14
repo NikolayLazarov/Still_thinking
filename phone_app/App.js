@@ -1,21 +1,44 @@
-//import { StatusBar } from 'expo-status-bar';
-import React,{useState} from 'react';
-import { StyleSheet, SafeAreaView, StatusBar, FlatList,View, TouchableOpacity} from 'react-native';
-//import Header from './applications/components/header';
-import { globalStyles } from './applications/styles/globalStyles';
+import 'react-native-gesture-handler';
+
+import { createStackNavigator } from 'react-navigation-stack';
+//import { StackRouter } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import HomePage from './applications/screens/home';
+import ProductsPage from './applications/screens/productsPage';
+import { StyleSheet, Text, View, ActivityIndicator} from 'react-native';
+import PreviewPage from './applications/screens/previewPage';
 
 
-import Navigator from './applications/routs/homeStack';
+//import React,{useState} from 'react';
 
+//import { globalStyles } from './applications/styles/globalStyles';
 
-export default function App() {
-return (
-    
-    <Navigator/>
-      );
+const screens = {
+  Home:{
+      screen: HomePage,
+    },
+
+  ProductsPage: {
+      screen: ProductsPage,
+  },
+  PreviewPage:{
+    screen: PreviewPage,
+    //title
+  }
+  
 }
 
 
+const HomeStack = createStackNavigator(screens);
+
+export default createAppContainer(HomeStack);
+
+
+
+
+/*
 const styles = StyleSheet.create({
 
 });
+
+*/

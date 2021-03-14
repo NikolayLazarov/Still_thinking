@@ -1,26 +1,24 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, SafeAreaView, FlatList, TouchableOpacity} from 'react-native';
 import { globalStyles } from '../styles/globalStyles';
-import SearchBar from '../components/searchBar'
+import SearchBar from '../components/searchBar';
+import MOCK_DATA from '../assets/MOCK_DATA';
+import { Header } from 'react-native/Libraries/NewAppScreen';
 
-export default function ProductsPage(){
-    const [types, setTypes] = useState([
-        {type: 'clothes', id:'1'},
-        {type: 'cars', id:'2'},
-        {type: 'books', id:'3'},
-        {type: 'Tvs', id:'4'},
-        {type: 'computers', id:'5'},
-        ]);
-    return(
+export default function ProductsPage({navigation}){
+    //const MOCK_DATA = require('./applications/assets/MOCK_DATA');
+
+
+ return(
         <SafeAreaView style = {globalStyles.container}>
-            <Text>Products Screen</Text>
+        {/**<Header/> */}
             <SearchBar/>
                 <View>
                 <FlatList 
-                data = {types}
+                data = {MOCK_DATA}
                 renderItem = {({item}) =>(
-                    <TouchableOpacity onPress = {()=> navigation.navigate('ProductPage', item)}>
-                    <Text style = {globalStyles.titleText}>{item.type}</Text>
+                    <TouchableOpacity onPress = {()=> navigation.navigate('PreviewPage', item)}>
+                    <Text style = {globalStyles.titleText}>{item.first_name}</Text>
                     </TouchableOpacity>
                 )}
                 
