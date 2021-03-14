@@ -40,7 +40,7 @@ class Item(models.Model):
 
 class ItemImage(models.Model):
     item = models.ForeignKey(
-        Item, verbose_name='Продукт', on_delete=models.CASCADE, related_name='images')
+        Item, verbose_name='Продукт', on_delete=models.CASCADE)
     image = models.ImageField(verbose_name='Снимка',
                               upload_to='product_pics')
     creation_date = models.DateTimeField(

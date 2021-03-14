@@ -8,7 +8,7 @@
   <div class="photo-detail">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        {% for image in item.images.all %}
+        {% for image in item.itemimage_set.all %}
         <div class="carousel-item active">
           <img src="{{ image.image.url }}" class="d-block w-100">
         </div>
