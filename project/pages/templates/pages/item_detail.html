@@ -4,7 +4,7 @@
 {% block content %}
 <img class="bannerimage"
   src="https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80">
-<div class="content">
+<div class="content" style="display:flex;">
   <div class="photo-detail">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -35,9 +35,13 @@
     </div>
     <!--<img class="border" src="https://osbornegroupcre.com/wp-content/uploads/2016/02/missing-image-640x360.png">-->
   </div>
-  <h1>{{ item.title }}</h1>
-  <p>{{ item.description }}</p>
-  <div class="text-muted">{{ item.usluga }}</div>
+  <div class="pt-5">
+    <h1>{{ item.item_name }}</h1>
+    <h3>{{ item.price }} BGN</h3>
+    <p>{{ item.description }}</p>
+    <h6>{{ item.creation_date}}</h6>
+    <div class="text-muted">{{ item.usluga }}</div>
+  </div>
 </div>
 </div>
 {% endblock %}
